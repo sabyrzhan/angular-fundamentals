@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+.well {
+  border: 1px solid dimgrey;
+  padding: 10px;
+}
+
+.hoverwell:hover {
+  border: 1px solid lightgray;
+}
