@@ -7,10 +7,11 @@
     <div class="collapse navbar-collapse" id="navbarScroll">
       <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">All events</a>
+          <a class="nav-link active" aria-current="page" [routerLink]="['/events']"
+             routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">All events</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Create event</a>
+          <a class="nav-link" [routerLink]="['/events/new']" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}">Create event</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -27,7 +28,9 @@
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search sessions" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
-        <span class="navbar-text">Welcome Sabyrzhan!</span>
+        <span class="navbar-text">
+          <a [routerLink]="['user/profile']">Welcome Sabyrzhan!</a>
+        </span>
       </form>
     </div>
   </div>
