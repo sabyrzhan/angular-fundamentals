@@ -29,7 +29,8 @@
         <input class="form-control me-2" type="search" placeholder="Search sessions" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>
         <span class="navbar-text">
-          <a [routerLink]="['user/profile']">Welcome Sabyrzhan!</a>
+          <a *ngIf="!authService.isAuthenticated()" [routerLink]="['user/login']">Login</a>
+          <a *ngIf="authService.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{authService.currentUser.firstName}}</a>
         </span>
       </form>
     </div>

@@ -35,6 +35,13 @@ Chapter 6:
   * Pre-load data to components using `resolve`. For example,
     data from REST service.
 
+Chapter 7:
+  * model based and template based form data processing
+  * two-way binding using `[(ngModel)]` syntax. `()` called banan syntax and used to bind data from form to code, whereas `[]` is called form binding 
+    used to bind or show data from code to template
+  * models are defined using `interface`
+  * stopped at video 5;
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

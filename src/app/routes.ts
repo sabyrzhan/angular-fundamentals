@@ -6,13 +6,14 @@ import {
 } from './events/index';
 import {Routes} from '@angular/router';
 import {Error404Component} from './errors/404.component';
+import {EventListResolverService} from './events/event-list-resolver.service';
 
 export const appRoutes: Routes = [
   {
     path: 'events/new', component: EventCreateComponent
   },
   {
-    path: 'events', component: EventsListComponent
+    path: 'events', component: EventsListComponent, resolve: {events: EventListResolverService}
   },
   {
     path: 'events/:id',
