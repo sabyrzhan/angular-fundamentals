@@ -44,7 +44,7 @@ Chapter 7:
   * creating custom validators
 
 Chapter 8:
-  * Stopped at video 2
+  * communicating between child-parent component
 
 ## Development server
 
