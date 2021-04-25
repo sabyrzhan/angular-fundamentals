@@ -44,7 +44,14 @@ Chapter 7:
   * creating custom validators
 
 Chapter 8:
-  * communicating between child-parent component
+  * communication between chaild-parent components
+
+Chapter 9:
+  * use content projection to control the display of the content of the element
+  * multiple content projects allow to map and show multiple contents
+
+Chapter 10:
+  * stopped at video 1
 
 ## Development server
 
