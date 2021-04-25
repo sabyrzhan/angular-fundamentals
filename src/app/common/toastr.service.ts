@@ -7,4 +7,8 @@ export class ToastrService {
   success(message: string, title?: string): void {
     toastr.success(message, title);
   }
+
+  error(message: string, title?: string): void {
+    toastr.error(message, title);
+  }
 }

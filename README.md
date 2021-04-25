@@ -40,7 +40,11 @@ Chapter 7:
   * two-way binding using `[(ngModel)]` syntax. `()` called banan syntax and used to bind data from form to code, whereas `[]` is called form binding 
     used to bind or show data from code to template
   * models are defined using `interface`
-  * stopped at video 5;
+  * validating forms using template-based and model-based form processing
+  * creating custom validators
+
+Chapter 8:
+  * Stopped at video 2
 
 ## Development server
 
