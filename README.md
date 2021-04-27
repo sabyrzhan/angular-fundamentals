@@ -51,7 +51,7 @@ Chapter 9:
   * multiple content projects allow to map and show multiple contents
 
 Chapter 10:
-  * stopped at video 1
+  * pipes and creation of custom pipe
 
 ## Development server
 
