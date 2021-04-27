@@ -29,11 +29,24 @@
     <div class="col-md-2">
       <h3 style="margin: 0">Sessions</h3>
     </div>
+    <div class="col-md-7">
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-default" [class.active]="sort === 'name'" (click)="sort='name'">Name</button>
+        <button class="btn btn-default" [class.active]="sort === 'votes'" (click)="sort='votes'">Votes</button>
+      </div>
+      <span> | </span>
+      <div class="btn-group btn-group-sm">
+        <button class="btn btn-default" [class.active]="filter === ''" (click)="filter=''">All</button>
+        <button class="btn btn-default" [class.active]="filter === 'beginner'" (click)="filter='beginner'">Beginner</button>
+        <button class="btn btn-default" [class.active]="filter === 'intermediate'" (click)="filter='intermediate'">Intermediate</button>
+        <button class="btn btn-default" [class.active]="filter === 'advanced'" (click)="filter='advanced'">Advanced</button>
+      </div>
+    </div>
     <div class="col-md-2">
       <a (click)="addSession()">Add Session</a>
     </div>
   </div>
 
-  <session-list *ngIf="!addMode" [sessions]="event?.sessions"></session-list>
+  <session-list *ngIf="!addMode" [filter]="filter" [sort]="sort" [sessions]="event?.sessions"></session-list>
   <create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)" (cancelCreateSession)="cancelNewSession()"></create-session>
 </div>

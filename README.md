@@ -52,6 +52,7 @@ Chapter 9:
 
 Chapter 10:
   * pipes and creation of custom pipe
+  * sorting and filtering using OnChanges interface
 
 ## Development server
 

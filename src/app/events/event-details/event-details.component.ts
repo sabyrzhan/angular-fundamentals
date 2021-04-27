@@ -20,6 +20,8 @@ import {IEvent, ISession} from '../shared';
 export class EventDetailsComponent implements OnInit {
   event?: IEvent;
   addMode = false;
+  filter = '';
+  sort = 'votes';
 
   constructor(private eventService: EventsService,
               private route: ActivatedRoute) {
