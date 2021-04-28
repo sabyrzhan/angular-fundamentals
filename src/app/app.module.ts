@@ -12,18 +12,28 @@ import {
   SessionListComponent,
   DurationPipe
 } from './events/index';
+
+import {
+  TOASTR_TOKEN,
+  Toastr,
+  CollapsibleWellComponent,
+  JQ_TOKEN,
+  SimpleModalComponent,
+  ModalTriggerDirective
+} from './common/index';
+
 import { EventsAppComponent } from './events-app.component';
 import {NavbarComponent} from './nav/navbar.component';
-import {TOASTR_TOKEN, Toastr} from './common/toastr.service';
 import {RouterModule} from '@angular/router';
 import { appRoutes } from './routes';
 import {Error404Component} from './errors/404.component';
 import {EventListResolverService} from './events/event-list-resolver.service';
 import {AuthService} from './user/auth.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {CollapsibleWellComponent} from './common/collapsible-well.component';
 
-declare let toastr: Toastr;
+const globalWindow = window as {[key:string]: any};
+const toastr: Toastr = globalWindow['toastr'];
+const jquery = globalWindow['$'];
 
 @NgModule({
   declarations: [
@@ -37,7 +47,9 @@ declare let toastr: Toastr;
     CreateSessionComponent,
     SessionListComponent,
     CollapsibleWellComponent,
-    DurationPipe
+    DurationPipe,
+    SimpleModalComponent,
+    ModalTriggerDirective
   ],
   imports: [
     BrowserModule,
@@ -53,6 +65,10 @@ declare let toastr: Toastr;
     {
       provide: TOASTR_TOKEN,
       useValue: toastr
+    },
+    {
+      provide: JQ_TOKEN,
+      useValue: jquery
     }
   ],
   bootstrap: [EventsAppComponent]

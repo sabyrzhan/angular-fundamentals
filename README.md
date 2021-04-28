@@ -58,6 +58,11 @@ Chapter 11:
   * 2 ways of injecting dependency into a class: InjectionToken and Inject decorator.
   * 2 ways of declaring providers: useValue -- use existing global variable or instance, useClass -- long version of declaring provider using class name
 
+Chapter 12:
+  * using Directives to process elements by custom attributes
+  * calling native JS code (for example jQuery) in Angular
+  * creating providers using native JS objects with useValue
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

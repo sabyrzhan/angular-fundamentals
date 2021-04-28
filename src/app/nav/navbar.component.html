@@ -25,9 +25,9 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Search sessions" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+      <form class="d-flex" (ngSubmit)="searchSessions(searchText)">
+        <input name="searchText" [(ngModel)]="searchText" class="form-control me-2" type="search" placeholder="Search sessions" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit" modal-trigger modal-id="simple-modal">Search</button>
         <span class="navbar-text">
           <a *ngIf="!authService.isAuthenticated()" [routerLink]="['user/login']">Login</a>
           <a *ngIf="authService.isAuthenticated()" [routerLink]="['user/profile']">Welcome {{authService.currentUser?.firstName}}</a>
@@ -36,3 +36,11 @@
     </div>
   </div>
 </nav>
+
+<simple-modal elementId="simple-modal" title="Matching sessions">
+  <div class="list-group">
+    <a class="list-group-item" *ngFor="let session of foundSessions" [routerLink]="['/events', session.eventId]">
+      {{session.name}}
+    </a>
+  </div>
+</simple-modal>
