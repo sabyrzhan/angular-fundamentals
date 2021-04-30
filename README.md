@@ -69,6 +69,9 @@ Chapter 13:
 Chapter 14:
   * HTTP request to server using RsJs Observables
 
+Chapter 15:
+  * Unit and isolated testing using Karma - test runtime env and jasmine - mocking fx. 
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
