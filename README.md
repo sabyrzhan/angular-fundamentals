@@ -70,7 +70,13 @@ Chapter 14:
   * HTTP request to server using RsJs Observables
 
 Chapter 15:
-  * Unit and isolated testing using Karma - test runtime env and jasmine - mocking fx. 
+  * Unit and isolated testing using Karma - test runtime env and jasmine - mocking fx.
+
+Chapter 16:
+  * Integration test using `TestBed` to configure and provide runtime environment.
+  * mocking using custom objects with custom mock methods
+  * Deep integration test -- including all dependent components
+  * Shallow integration test -- using `NO_ERROR_SCHEMA` schema 
 
 ## Development server
 
