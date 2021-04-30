@@ -17,7 +17,7 @@ export class ModalTriggerDirective implements OnInit {
 
   ngOnInit(): void {
     console.log(this.modalId);
-    this.jQuery(this.el).on('click', (e: any) => {
+    this.jQuery(this.el).on('click', (e: never) => {
       this.jQuery(`#${this.modalId}`).modal({});
     });
   }

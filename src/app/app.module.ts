@@ -14,7 +14,7 @@ import {
   VoterService,
   LocationValidatorDirective,
   EventResolverService
-} from './events/index';
+} from './events';
 
 import {
   TOASTR_TOKEN,
@@ -23,11 +23,11 @@ import {
   JQ_TOKEN,
   SimpleModalComponent,
   ModalTriggerDirective
-} from './common/index';
+} from './common';
 
 import { EventsAppComponent } from './events-app.component';
 import {NavbarComponent} from './nav/navbar.component';
-import {RouterModule} from '@angular/router';
+import {PreloadAllModules, RouterModule} from '@angular/router';
 import { appRoutes } from './routes';
 import {Error404Component} from './errors/404.component';
 import {EventListResolverService} from './events/event-list-resolver.service';
@@ -35,7 +35,7 @@ import {AuthService} from './user/auth.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 
-const globalWindow = window as {[key:string]: any};
+const globalWindow = window as never;
 const toastr: Toastr = globalWindow['toastr'];
 const jquery = globalWindow['$'];
 
@@ -59,7 +59,7 @@ const jquery = globalWindow['$'];
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, {preloadingStrategy: PreloadAllModules}),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule

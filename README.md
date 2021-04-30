@@ -78,13 +78,26 @@ Chapter 16:
   * Deep integration test -- including all dependent components
   * Shallow integration test -- using `NO_ERROR_SCHEMA` schema 
 
+Chapter 17:
+  * build for prod using `ng build --prod`
+  * all bundle downloading at start by using `{preloadingStrategy: PreloadAllModules}` in routes.
+  * fixing code style and common problems using ESLint
+  * `npm build` build the artifact inside `dist/<app_name>` folder with all dependencies
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Start backend server
 
-Run `npm run server` and it will start server at `http://localhost:8808`.
+1. `npm install --save ngf-server`
+2. Run `npm run server` and it will start server at `http://localhost:8808`.
+3. Login: `johnpapa` and pass: anypass
+
+## Running prod app locally using docker-compose in nginx
+
+There is a `docker-compose.yml` file with nginx service. It also uses `nginx.conf` which has rules for locations.
+To use backend service at port `8808` change upstram IP address to host IP address in `nginx.conf`.
 
 ## Code scaffolding
 
