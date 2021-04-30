@@ -63,6 +63,9 @@ Chapter 12:
   * calling native JS code (for example jQuery) in Angular
   * creating providers using native JS objects with useValue
 
+Chapter 13:
+  * adding custom validator using directive
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

@@ -10,7 +10,10 @@ import {
   EventRouteActivatorService,
   CreateSessionComponent,
   SessionListComponent,
-  DurationPipe
+  DurationPipe,
+  UpvoteComponent,
+  VoterService,
+  LocationValidatorDirective
 } from './events/index';
 
 import {
@@ -49,7 +52,9 @@ const jquery = globalWindow['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
-    ModalTriggerDirective
+    ModalTriggerDirective,
+    UpvoteComponent,
+    LocationValidatorDirective
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ const jquery = globalWindow['$'];
     EventRouteActivatorService,
     EventListResolverService,
     AuthService,
+    VoterService,
     {
       provide: TOASTR_TOKEN,
       useValue: toastr
