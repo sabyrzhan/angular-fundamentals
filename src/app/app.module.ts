@@ -7,13 +7,13 @@ import {
   EventsService,
   EventDetailsComponent,
   EventCreateComponent,
-  EventRouteActivatorService,
   CreateSessionComponent,
   SessionListComponent,
   DurationPipe,
   UpvoteComponent,
   VoterService,
-  LocationValidatorDirective
+  LocationValidatorDirective,
+  EventResolverService
 } from './events/index';
 
 import {
@@ -33,6 +33,7 @@ import {Error404Component} from './errors/404.component';
 import {EventListResolverService} from './events/event-list-resolver.service';
 import {AuthService} from './user/auth.service';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 const globalWindow = window as {[key:string]: any};
 const toastr: Toastr = globalWindow['toastr'];
@@ -60,12 +61,13 @@ const jquery = globalWindow['$'];
     BrowserModule,
     RouterModule.forRoot(appRoutes),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [
     EventsService,
-    EventRouteActivatorService,
     EventListResolverService,
+    EventResolverService,
     AuthService,
     VoterService,
     {

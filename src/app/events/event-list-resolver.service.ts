@@ -1,6 +1,5 @@
 import {Resolve} from '@angular/router';
 import {EventsService, IEvent} from './shared';
-import {map} from 'rxjs/operators';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 
@@ -9,6 +8,6 @@ export class EventListResolverService implements Resolve<any> {
   constructor(private eventService: EventsService) { }
 
   resolve(): Observable<IEvent[]> {
-    return this.eventService.getEvents().pipe(map(events => events));
+    return this.eventService.getEvents();
   }
 }

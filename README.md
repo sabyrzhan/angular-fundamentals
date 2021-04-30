@@ -66,9 +66,16 @@ Chapter 12:
 Chapter 13:
   * adding custom validator using directive
 
+Chapter 14:
+  * HTTP request to server using RsJs Observables
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Start backend server
+
+Run `npm run server` and it will start server at `http://localhost:8808`.
 
 ## Code scaffolding
 

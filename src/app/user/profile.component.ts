@@ -48,9 +48,10 @@ export class ProfileComponent implements OnInit{
 
   saveProfile(profileForm: any): void {
     if (this.profileForm.valid) {
-      this.authService.updateCurrentUser(profileForm.firstName, profileForm.lastName);
-      this.toastService.success('Successfully updated');
-      this.router.navigate(['events']);
+      this.authService.updateCurrentUser(profileForm.firstName, profileForm.lastName).subscribe(data => {
+        this.toastService.success('Successfully updated');
+        this.router.navigate(['events']);
+      });
     } else {
       this.toastService.error('The required fields were not filled. Please fix.');
     }
@@ -66,5 +67,11 @@ export class ProfileComponent implements OnInit{
 
   isLastNameInvalid(): boolean {
     return this.profileForm.controls.lastName.invalid && this.profileForm.controls.lastName.touched;
+  }
+
+  logout(): void {
+    this.authService.logout().subscribe(() => {
+      this.router.navigate(['/user/login']);
+    });
   }
 }
